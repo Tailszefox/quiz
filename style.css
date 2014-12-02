@@ -1,0 +1,326 @@
+body
+{
+	text-align: center;
+	background-color: #DDDDDD;
+	font-family: Arial;
+}
+
+#titre
+{
+	border: 2px solid red;
+	width: 80%;
+	margin: auto;
+	
+	background-color: #FFFFFF;
+	
+	font-size: 30pt;
+	padding: 10px;
+}
+
+.rubrique
+{
+	border: 1px solid black;
+	width: 50%;
+	margin: auto;
+	
+	background-color: #FFFFFF;
+	
+	padding: 10px;
+	margin-top: 5px;
+	
+	text-align: justify;
+}
+
+.titre
+{
+	font-size: 20pt;
+}
+
+.anciennes
+{
+	font-size: 8pt;
+}
+
+#formulaire
+{
+	text-align: center;
+}
+
+#jeanpierre-image
+{
+	background-color: #FFFFFF;
+	width: 120px;
+	height: 150px;
+	
+	border: 2px solid blue;
+	
+	position: absolute;
+	top: 0px;
+	padding: 0px 5px;
+	
+	font-weight: bold;
+}
+
+#deconnecter
+{
+	background-color: #FFFFFF;
+	width: 120px;
+	height: 40px;
+	
+	border: 2px solid black;
+	
+	/*font-size: 12pt;*/
+	/*line-height: 29px;*/
+
+	position: absolute;
+	top: 160px;
+	padding: 0px 5px;
+	
+}
+
+#deconnecterTexte
+{
+	color: #0000FF;
+
+	cursor: pointer;
+	
+	line-height: 0px;
+}
+
+#classement
+{
+	background-color: #FFFFFF;
+	border: 2px solid black;
+	width: 120px;
+	
+	position: absolute;
+	top: 210px;
+	
+	padding: 0px 5px;
+	
+	z-index: 1;
+}
+
+#afficherClassement
+{
+	color: #0000FF;
+	cursor: pointer;
+}
+
+#jeanpierre-chat
+{
+	background-color: #FFFFFF;
+	
+	height: 180px;
+	width: 85%;
+	
+	border: 2px solid blue;
+	
+	position: absolute;
+	top: 0px;
+	left: 150px;
+	
+	text-align: left;
+	
+	padding: 5px;
+}
+
+#compteur
+{
+	margin-left: 30%;
+}
+
+#question
+{
+	text-align: center;
+	font-weight: bold;
+	margin-left: 5%;
+	padding: 5%;
+}
+
+.reponsesCandidats
+{
+	width: 15%;
+	
+	background-color: #FFFFFF;
+	
+	border: 2px solid black;
+	border-bottom: 0px solid white !important;
+	
+	position: absolute;
+	bottom: 338px;
+}
+
+.reponsesCandidatsdeux
+{
+	width: 15%;
+	
+	background-color: #FFFFFF;
+	
+	border: 2px solid black;
+	border-bottom: 0px solid white !important;
+	
+	position: absolute;
+	bottom: 251px;
+}
+
+#reponseCandidat1
+{
+	left: 12%;
+}
+
+#reponseCandidat2
+{
+	left: 32%;
+}
+
+#reponseCandidat3
+{
+	left: 52%;
+}
+
+#reponseCandidat4
+{
+	left: 72%;
+}
+
+#reponseCandidat5
+{
+	left: 12%;
+}
+
+#reponseCandidat6
+{
+	left: 32%;
+}
+
+#reponseCandidat7
+{
+	left: 52%;
+}
+
+#reponseCandidat8
+{
+	left: 72%;
+}
+
+.pupitres
+{
+	background-color: #FFFFFF;
+	
+	border: 2px solid black;
+	
+	width: 15%;
+	
+	position: absolute;
+	bottom: 281px;
+}
+
+.pupitresdeux
+{
+	background-color: #FFFFFF;
+	
+	border: 2px solid black;
+	
+	width: 15%;
+	
+	position: absolute;
+	bottom: 194px;
+}
+
+#pupitre1
+{	
+	left: 12%;
+}
+
+#pupitre2
+{	
+	left: 32%;
+}
+
+#pupitre3
+{	
+	left: 52%;
+}
+
+#pupitre4
+{	
+	left: 72%;
+}
+
+#pupitre5
+{	
+	left: 12%;
+}
+
+#pupitre6
+{	
+	left: 32%;
+}
+
+#pupitre7
+{	
+	left: 52%;
+}
+
+#pupitre8
+{	
+	left: 72%;
+}
+
+
+.pseudos
+{
+	font-size: 15pt;
+	width: 100%;
+	border: 1px solid black;
+	
+	padding: 0px 10px;
+}
+
+.scores
+{
+	font-size: 20pt;
+	color: #0000FF;
+}
+
+#formulaireReponse
+{
+	visibility: hidden;
+	position: absolute;
+	width: 99%;
+	bottom: 187px;
+}
+
+#champReponse
+{
+	width: 300px;
+}
+
+#chat
+{
+	background-color: #FFFFFF;
+	
+	text-align: left;
+	
+	width: 80%;
+	height: 155px;
+	
+	position: absolute;
+	bottom: 10px;
+	
+	margin-left: 10%;
+	
+	overflow: auto;
+	
+	border: 2px solid black;
+}
+
+#parler
+{
+     position: absolute;
+     
+     bottom: 0px;
+     
+     width: 99%;
+}

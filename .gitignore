@@ -1,0 +1,8 @@
+# Fichier de config
+config.txt
+
+# Fichier d'admin indépendant
+admin.php
+
+# Fichiers de backup
+*~
