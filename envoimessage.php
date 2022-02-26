@@ -16,7 +16,7 @@ require('./mysql.php');
 
 if($message != '')
 {
-	$requete = 'INSERT INTO chat (id, auteur, message, timestamp) VALUES("", "'.$_SESSION['id'].'", "'.$message.'", "'.time().'")';
+	$requete = 'INSERT INTO chat (auteur, message, timestamp) VALUES("'.$_SESSION['id'].'", "'.$message.'", "'.time().'")';
 	$reponse = mysql_query($requete)or die('Erreur SQL<br>'.$requete.'<br>'.mysql_error());
 }
 ?>

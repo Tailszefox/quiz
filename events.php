@@ -11,7 +11,7 @@ require('./mysql.php');
 
 echo '<chat><![CDATA[';
 
-$requete = '(SELECT *, chat.id as idchat FROM chat, participants WHERE chat.auteur=participants.id ORDER BY chat.id DESC LIMIT 30) ORDER BY timestamp, idchat';
+$requete = '(SELECT chat.timestamp, chat.id as idchat, chat.message, participants.pseudo FROM chat, participants WHERE chat.auteur=participants.id ORDER BY chat.id DESC LIMIT 30) ORDER BY timestamp, idchat';
 $reponse = mysql_query($requete)or die('Erreur SQL<br>'.$requete.'<br>'.mysql_error());
 
 while($donnees = mysql_fetch_array($reponse))
@@ -123,7 +123,7 @@ else
 		//On en pose une nouvelle
 		//$requete = 'INSERT INTO partie (id, question, demarrage, arret) VALUES("", CEIL(RAND()*(SELECT COUNT(*) FROM questions)), "'.$demarrage.'", "'.$arret.'")';
 		//$requete = 'INSERT INTO partie (id, question, demarrage, arret) VALUES("", 1374, "'.$demarrage.'", "'.$arret.'")';
-		$requete = 'INSERT INTO partie (id, question, demarrage, arret) VALUES("", (SELECT id FROM questions WHERE nbPosee = (SELECT MIN(nbPosee) FROM questions) ORDER BY RAND() LIMIT 1), "'.$demarrage.'", "'.$arret.'")';
+		$requete = 'INSERT INTO partie (id, question, demarrage, arret) VALUES(NULL, (SELECT id FROM questions WHERE nbPosee = (SELECT MIN(nbPosee) FROM questions) ORDER BY RAND() LIMIT 1), "'.$demarrage.'", "'.$arret.'")';
 		$reponse = mysql_query($requete)or die('Erreur SQL<br>'.$requete.'<br>'.mysql_error());
 		
 		//On efface les réponses des candidats
@@ -220,7 +220,7 @@ else
 			//$requete = 'INSERT INTO partie (id, question, demarrage, arret) VALUES("", CEIL(RAND()*(SELECT COUNT(*) FROM questions)), "'.$demarrage.'", "'.$arret.'")';
 			//$requete = 'INSERT INTO partie (id, question, demarrage, arret) VALUES("", 1374, "'.$demarrage.'", "'.$arret.'")';
 
-			$requete = 'INSERT INTO partie (id, question, demarrage, arret) VALUES("", (SELECT id FROM questions WHERE nbPosee = (SELECT MIN(nbPosee) FROM questions) ORDER BY RAND() LIMIT 1), "'.$demarrage.'", "'.$arret.'")';
+			$requete = 'INSERT INTO partie (id, question, demarrage, arret) VALUES(NULL, (SELECT id FROM questions WHERE nbPosee = (SELECT MIN(nbPosee) FROM questions) ORDER BY RAND() LIMIT 1), "'.$demarrage.'", "'.$arret.'")';
 			$reponse = mysql_query($requete)or die('Erreur SQL<br>'.$requete.'<br>'.mysql_error());
 			
 			//On efface les réponses des candidats

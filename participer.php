@@ -36,7 +36,7 @@ if(mysql_num_rows($reponse) == 0)
 		}
 		else
 		{
-			$requete = 'INSERT INTO participants(id, pseudo, password, timestampDerniereReponse, actif) VALUES("", "'.$pseudoP.'", "'.$password.'", "'.time().'", 1)';
+			$requete = 'INSERT INTO participants(pseudo, password, timestampDerniereReponse, actif, reponse) VALUES("'.$pseudoP.'", "'.$password.'", "'.time().'", 1, "")';
 			$reponse = mysql_query($requete)or die('Erreur SQL<br>'.$requete.'<br>'.mysql_error());
 			
 			$_SESSION['pseudo'] = $pseudoP;

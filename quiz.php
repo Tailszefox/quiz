@@ -363,7 +363,7 @@ require('./mysql.php');
 		$demarrage = time() + 60;
 		$arret = $demarrage + 20;
 		
-		$requete = 'INSERT INTO partie (id, question, demarrage, arret) VALUES("", (SELECT id FROM questions WHERE nbPosee = (SELECT MIN(nbPosee) FROM questions) ORDER BY RAND() LIMIT 1), "'.$demarrage.'", "'.$arret.'")';
+		$requete = 'INSERT INTO partie (id, question, demarrage, arret) VALUES(NULL, (SELECT id FROM questions WHERE nbPosee = (SELECT MIN(nbPosee) FROM questions) ORDER BY RAND() LIMIT 1), "'.$demarrage.'", "'.$arret.'")';
 		$reponse = mysql_query($requete)or die('Erreur SQL<br>'.$requete.'<br>'.mysql_error());
 		
 		//On refait la requête
